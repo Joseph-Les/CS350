@@ -1,0 +1,227 @@
+/*
+ * Copyright (c) 2015-2020, Texas Instruments Incorporated
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * *  Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * *  Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * *  Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ *  ======== gpiointerrupt.c ========
+ */
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+
+/* Driver Header files */
+#include <ti/drivers/GPIO.h>
+#include <ti/drivers/Timer.h>
+#include <ti/drivers/I2C.h>
+#include <ti/drivers/UART2.h>
+
+/* Driver configuration */
+#include "ti_drivers_config.h"
+
+#define BUTTON_INC_PIN CONFIG_GPIO_BUTTON_0 // Adjust as per your configuration
+#define BUTTON_DEC_PIN CONFIG_GPIO_BUTTON_1 // Adjust as per your configuration
+#define LED_PIN CONFIG_GPIO_LED_0 // Adjust as per your configuration
+
+UART2_Handle uart2;
+I2C_Handle i2c;
+Timer_Handle timer0;
+
+volatile unsigned char TimerFlag = 0;
+volatile int16_t temperature = 0;
+volatile int setPoint = 22; // Default set-point temperature
+volatile bool heatOn = false;
+volatile unsigned int seconds = 0;
+
+char output[64];
+
+uint32_t buttonIncLastDebounceTime = 0;
+uint32_t buttonDecLastDebounceTime = 0;
+
+const uint32_t debounceDelay = 200; // 200 ms debounce delay
+
+/* UART2 initialization */
+void initUART(void) {
+    UART2_Params uartParams;
+
+    UART2_write();
+    UART2_Params_init(&uartParams);
+    uartParams.writeDataMode = UART2_DataMode_BINARY;
+    uartParams.readDataMode = UART2_DataMode_BINARY;
+    uartParams.readReturnMode = UART2_ReadReturnMode_FULL;
+    uartParams.baudRate = 115200;
+
+    uart2 = UART2_open(CONFIG_UART2_0, &uartParams);
+    if (uart2 == NULL) {
+        while (1) {}
+    }
+}
+
+/* I2C initialization */
+void initI2C(void) {
+    I2C_Params i2cParams;
+    I2C_init();
+    I2C_Params_init(&i2cParams);
+    i2cParams.bitRate = I2C_400kHz;
+    i2c = I2C_open(CONFIG_I2C_0, &i2cParams);
+    if (i2c == NULL) {
+        while (1) {}
+    }
+}
+
+/* Timer initialization */
+void initTimer(void) {
+    Timer_Params params;
+    Timer_init();
+    Timer_Params_init(&params);
+    params.period = 200000; // 200 ms period
+    params.periodUnits = Timer_PERIOD_US;
+    params.timerMode = Timer_CONTINUOUS_CALLBACK;
+    params.timerCallback = timerCallback;
+
+    timer0 = Timer_open(CONFIG_TIMER_0, &params);
+    if (timer0 == NULL) {
+        while (1) {}
+    }
+
+    if (Timer_start(timer0) == Timer_STATUS_ERROR) {
+        while (1) {}
+    }
+}
+
+/* GPIO initialization */
+void initGPIO(void) {
+    GPIO_setConfig(BUTTON_INC_PIN, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
+    GPIO_setConfig(BUTTON_DEC_PIN, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
+    GPIO_setConfig(LED_PIN, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+
+    GPIO_setCallback(BUTTON_INC_PIN, buttonIncCallback);
+    GPIO_setCallback(BUTTON_DEC_PIN, buttonDecCallback);
+
+    GPIO_enableInt(BUTTON_INC_PIN);
+    GPIO_enableInt(BUTTON_DEC_PIN);
+}
+
+/* Timer callback */
+void timerCallback(Timer_Handle myHandle, int_fast16_t status) {
+    TimerFlag = 1;
+}
+
+/* Button increment callback */
+void buttonIncCallback(uint_least8_t index) {
+    uint32_t currentTime = Timer_getCount(timer0);
+    if ((currentTime - buttonIncLastDebounceTime) > debounceDelay) {
+        setPoint++;
+        buttonIncLastDebounceTime = currentTime;
+    }
+}
+
+/* Button decrement callback */
+void buttonDecCallback(uint_least8_t index) {
+    uint32_t currentTime = Timer_getCount(timer0);
+    if ((currentTime - buttonDecLastDebounceTime) > debounceDelay) {
+        setPoint--;
+        buttonDecLastDebounceTime = currentTime;
+    }
+}
+
+/* Read temperature */
+int16_t readTemp(void) {
+    uint8_t txBuffer[1];
+    uint8_t rxBuffer[2];
+    I2C_Transaction i2cTransaction;
+    int16_t temperature = 0;
+
+    txBuffer[0] = 0x00; // Register address
+    i2cTransaction.slaveAddress = 0x48; // TMP006 address
+    i2cTransaction.writeBuf = txBuffer;
+    i2cTransaction.writeCount = 1;
+    i2cTransaction.readBuf = rxBuffer;
+    i2cTransaction.readCount = 2;
+
+    if (I2C_transfer(i2c, &i2cTransaction)) {
+        temperature = (rxBuffer[0] << 8) | rxBuffer[1];
+        temperature *= 0.0078125;
+    }
+
+    return temperature;
+}
+
+/*
+ *  ======== mainThread ========
+ *  Main function for initializing GPIO, timer, and handling button press interrupts.
+ */
+void main(void) {
+    // Initialize peripherals
+    initUART();
+    initI2C();
+    initTimer();
+    initGPIO();
+
+    uint32_t checkButtonsInterval = 200 / 200; // 200 ms intervals
+    uint32_t checkTempInterval = 500 / 200; // 500 ms intervals
+    uint32_t updateInterval = 1000 / 200; // 1000 ms intervals
+
+    uint32_t buttonCount = 0;
+    uint32_t tempCount = 0;
+    uint32_t updateCount = 0;
+
+    while (1) {
+        if (TimerFlag) {
+            TimerFlag = 0;
+            buttonCount++;
+            tempCount++;
+            updateCount++;
+
+            if (buttonCount >= checkButtonsInterval) {
+                buttonCount = 0;
+                // Button state check handled in callbacks
+            }
+
+            if (tempCount >= checkTempInterval) {
+                tempCount = 0;
+                temperature = readTemp();
+            }
+
+            if (updateCount >= updateInterval) {
+                updateCount = 0;
+                seconds++;
+                heatOn = temperature < setPoint;
+                GPIO_write(LED_PIN, heatOn ? GPIO_CFG_OUT_HIGH : GPIO_CFG_OUT_LOW);
+
+                snprintf(output, sizeof(output), "<%02d,%02d,%d,%04d>\n\r",
+                         temperature, setPoint, heatOn, seconds);
+                DISPLAY(strlen(output));
+            }
+        }
+    }
+}

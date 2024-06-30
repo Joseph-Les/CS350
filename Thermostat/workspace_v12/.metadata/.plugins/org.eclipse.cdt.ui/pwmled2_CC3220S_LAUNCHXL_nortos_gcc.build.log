@@ -1,0 +1,9 @@
+
+**** Build of configuration MCU+Image for project pwmled2_CC3220S_LAUNCHXL_nortos_gcc ****
+
+/Applications/ti/ccs1270/ccs/utils/bin/gmake -k -j 11 all -O 
+ 
+gmake[1]: 'pwmled2_CC3220S_LAUNCHXL_nortos_gcc.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****

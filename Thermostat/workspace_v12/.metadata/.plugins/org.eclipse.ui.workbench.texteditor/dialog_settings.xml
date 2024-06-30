@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="BUTTON_STATE"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="BUTTON_STATE"/>
+			<item value="ambientTemperature"/>
+			<item value=""/>
+			<item value="adjustSetPointTemperature"/>
+			<item value="getAmbientTemperature"/>
+			<item value="wifi"/>
+			<item value="DISPLAY"/>
+			<item value="LED_1"/>
+			<item value="gpio_toggle"/>
+			<item value="LED_OFF"/>
+			<item value="LED_GREEN"/>
+			<item value="LED_RED"/>
+			<item value="OK_MESSAGE"/>
+			<item value="SOS_MESSAGE"/>
+			<item value="pwmled2"/>
+		</list>
+		<list key="replacehistory">
+			<item value="OFF"/>
+			<item value="GREEN"/>
+			<item value="RED"/>
+			<item value="OK_Signal"/>
+			<item value="SOS"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="472"/>
+		<item key="DIALOG_Y_ORIGIN" value="411"/>
+		<item key="DIALOG_WIDTH" value="336"/>
+		<item key="DIALOG_HEIGHT" value="402"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+</section>

@@ -1,0 +1,48 @@
+
+**** Build of configuration MCU+Image for project gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc ****
+
+/Applications/ti/ccs1270/ccs/utils/bin/gmake -k -j 11 all -O 
+ 
+Building file: "../gpiointerrupt.c"
+Invoking: GNU Compiler
+"/Applications/ti/ccs1270/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=soft -DDeviceFamily_CC3220 -DNORTOS_SUPPORT -I"/Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc" -I"/Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image" -I"/Users/josephles/ti/simplelink_cc32xx_sdk_7_10_00_13/source" -I"/Users/josephles/ti/simplelink_cc32xx_sdk_7_10_00_13/kernel/nortos" -I"/Users/josephles/ti/simplelink_cc32xx_sdk_7_10_00_13/kernel/nortos/posix" -I"/Applications/ti/ccs1270/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include/newlib-nano" -I"/Applications/ti/ccs1270/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/include" -O3 -ffunction-sections -fdata-sections -g -gstrict-dwarf -Wall -MMD -MP -MF"gpiointerrupt.d_raw" -MT"gpiointerrupt.o" -I"/Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/syscfg" -std=c99  -o"gpiointerrupt.o" "../gpiointerrupt.c"
+Finished building: "../gpiointerrupt.c"
+ 
+Building target: "gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out"
+Invoking: GNU Linker
+"/Applications/ti/ccs1270/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-gcc-9.2.1" -DDeviceFamily_CC3220 -DNORTOS_SUPPORT -O3 -ffunction-sections -fdata-sections -g -gstrict-dwarf -Wall -march=armv7e-m -mthumb -mfloat-abi=soft -Wl,-Map,"gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.map" --entry resetISR -nostartfiles -static -Wl,--gc-sections -L"/Users/josephles/ti/simplelink_cc32xx_sdk_7_10_00_13/source" -L"/Users/josephles/ti/simplelink_cc32xx_sdk_7_10_00_13/kernel/nortos" -L"/Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/syscfg" -L"/Applications/ti/ccs1270/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/arm-none-eabi/lib/thumb/v7e-m/nofp" -march=armv7e-m -mthumb --specs=nano.specs -o"gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out" "./gpiointerrupt.o" "./syscfg/ti_drivers_config.o" "./main_nortos.o" -Wl,-T"../cc32xxs_nortos.lds"  -l:ti_utils_build_linker.cmd.genlibs -l:"ti/devices/cc32xx/driverlib/gcc/Release/driverlib.a" -lgcc -lc -lm -lnosys 
+Finished building target: "gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out"
+ 
+Building secondary target: "gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.bin"
+Invoking: GNU Objcopy Utility
+"/Applications/ti/ccs1270/ccs/tools/compiler/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-objcopy" -O binary  "gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out"  "gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.bin"
+Finished building secondary target: "gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.bin"
+ 
+Building secondary target: "syscfg/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.sli"
+Invoking: Image Creator
+"/Users/josephles/ti/simplelink_cc32xx_sdk_7_10_00_13/source/ti/drivers/net/imagecreator/bin/SLImageCreator" syscfg create_image --sdk_path "/Users/josephles/ti/simplelink_cc32xx_sdk_7_10_00_13" --json "/Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/syscfg/ti_drivers_net_wifi_config.json" --file "/Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/syscfg/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.sli" --mcu "/Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.bin"
+makefile:166: recipe for target 'syscfg/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.sli' failed
+[88324] Failed to execute script 'SLImageCreator' due to unhandled exception!
+Traceback (most recent call last):
+  File "SLImageCreator.py", line 1718, in connect_device
+  File "slutils/slutils.py", line 102, in auto_detect
+slutils.slutils.DeviceError: Auto detect failure
+ 
+During handling of the above exception, another exception occurred:
+ 
+Traceback (most recent call last):
+  File "SLImageCreator.py", line 5540, in <module>
+  File "SLImageCreator.py", line 5536, in main
+  File "SLImageCreator.py", line 5506, in cmdline
+  File "SLImageCreator.py", line 4924, in command_sysconfig_create_image
+  File "SLImageCreator.py", line 2670, in create_image_from_sysconfig
+  File "SLImageCreator.py", line 1730, in connect_device
+  File "slutils/slutils.py", line 259, in auto_detect
+slutils.slutils.DeviceError: 
+Error: SLImageCreator.exe: Device is not detected. The application binary was compiled, but the image cannot be generated. Plug in your LaunchPad and try again.
+gmake[1]: *** [syscfg/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.sli] Error 1
+gmake[1]: Target 'secondary-outputs' not remade because of errors.
+gmake: *** [all] Error 2
+makefile:148: recipe for target 'all' failed
+
+**** Build Finished ****

@@ -1,0 +1,216 @@
+/*
+ * Copyright (c) 2015-2020, Texas Instruments Incorporated
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * *  Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * *  Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * *  Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ *  ======== gpiointerrupt.c ========
+ */
+#include <stdint.h>
+#include <stddef.h>
+
+/* Driver Header files */
+#include <ti/drivers/GPIO.h>
+#include <ti/drivers/Timer.h>
+
+/* Driver configuration */
+#include "ti_drivers_config.h"
+#include <ti/drivers/I2C.h>
+#include <ti/drivers/UART2.h>
+
+#define DISPLAY(x) UART2_write(uart2, output, x, NULL);
+
+char output[64];
+int bytesToSend;
+UART2_Handle uart2;
+
+// I2C Global Variables
+static const struct {
+    uint8_t address;
+    uint8_t resultReg;
+    char *id;
+} sensors[3] = {
+    { 0x48, 0x0000, "11X" },
+    { 0x49, 0x0000, "116" },
+    { 0x41, 0x0001, "006" }
+};
+
+uint8_t txBuffer[1];
+uint8_t rxBuffer[2];
+I2C_Transaction i2cTransaction;
+
+// Driver Handles - Global variables
+I2C_Handle i2c;
+
+void initI2C(void) {
+    int8_t i, found;
+    I2C_Params i2cParams;
+
+    Display_printf(displayHandle, 0, 0, "Initializing I2C Driver - ");
+
+    // Initialize the driver
+    I2C_init();
+
+    // Configure the driver
+    I2C_Params_init(&i2cParams);
+    i2cParams.bitRate = I2C_400kHz;
+
+    // Open the driver
+    i2c = I2C_open(CONFIG_I2C_0, &i2cParams);
+    if (i2c == NULL) {
+        Display_printf(displayHandle, 0, 0, "Failed\n\r");
+        while (1);
+    }
+    Display_printf(displayHandle, 0, 0, "Passed\n\r");
+
+    // Try to determine which sensor we have
+    i2cTransaction.writeBuf = txBuffer;
+    i2cTransaction.writeCount = 1;
+    i2cTransaction.readBuf = rxBuffer;
+    i2cTransaction.readCount = 0;
+
+    found = false;
+    for (i = 0; i < 3; ++i) {
+        i2cTransaction.slaveAddress = sensors[i].address;
+        txBuffer[0] = sensors[i].resultReg;
+        Display_printf(displayHandle, 0, 0, "Is this %s? ", sensors[i].id);
+        if (I2C_transfer(i2c, &i2cTransaction)) {
+            Display_printf(displayHandle, 0, 0, "Found\n\r");
+            found = true;
+            break;
+        }
+        Display_printf(displayHandle, 0, 0, "No\n\r");
+    }
+    if (found) {
+        Display_printf(displayHandle, 0, 0, "Detected TMP%s I2C address: %x\n\r", sensors[i].id, i2cTransaction.slaveAddress);
+    } else {
+        Display_printf(displayHandle, 0, 0, "Temperature sensor not found, contact professor\n\r");
+    }
+}
+
+int16_t readTemp(void) {
+    int j;
+    int16_t temperature = 0;
+
+    i2cTransaction.readCount = 2;
+    if (I2C_transfer(i2c, &i2cTransaction)) {
+        temperature = (rxBuffer[0] << 8) | (rxBuffer[1]);
+        temperature *= 0.0078125;
+
+        if (rxBuffer[0] & 0x80) {
+            temperature |= 0xF000;
+        }
+    } else {
+        Display_printf(displayHandle, 0, 0, "Error reading temperature sensor (%d)\n\r", i2cTransaction.status);
+        Display_printf(displayHandle, 0, 0, "Please power cycle your board by unplugging USB and plugging back in.\n\r");
+    }
+    return temperature;
+}
+
+void initUART(void) {
+    UART2_Params uartParams;
+
+    // Init the driver
+    UART2_init();
+
+    // Configure the driver
+    UART2_Params_init(&uartParams);
+    uartParams.writeDataMode = UART2_DataMode_BINARY;
+    uartParams.readDataMode = UART2_DataMode_BINARY;
+    uartParams.readReturnMode = UART2_ReadReturnMode_FULL;
+    uartParams.baudRate = 115200;
+
+    // Open the driver
+    uart2 = UART2_open(CONFIG_UART2_0, &uartParams);
+    if (uart2 == NULL) {
+        /* UART2_open() failed */
+        while (1);
+    }
+}
+
+Timer_Handle timer0;
+volatile unsigned char TimerFlag = 0;
+
+void timerCallback(Timer_Handle myHandle, int_fast16_t status) {
+    TimerFlag = 1;
+}
+
+void initTimer(void) {
+    Timer_Params params;
+
+    // Init the driver
+    Timer_init();
+
+    // Configure the driver
+    Timer_Params_init(&params);
+    params.period = 1000000; // Set period to 1 second (1000000 microseconds)
+    params.periodUnits = Timer_PERIOD_US; // Specify period units as microseconds
+    params.timerMode = Timer_CONTINUOUS_CALLBACK; // Set timer mode to continuous
+    params.timerCallback = timerCallback; // Set callback function
+
+    // Open the driver
+    timer0 = Timer_open(CONFIG_TIMER_0, &params);
+    if (timer0 == NULL) {
+        /* Failed to initialized timer */
+        while (1) {}
+    }
+
+    // Start the timer
+    if (Timer_start(timer0) == Timer_STATUS_ERROR) {
+        /* Failed to start timer */
+        while (1) {}
+    }
+}
+
+/*
+ *  ======== mainThread ========
+ *  Main function for initializing GPIO, timer, and handling button press interrupts.
+ */
+void main(void) {
+    // Initialize other peripherals
+    initUART();
+    initI2C();
+    initTimer();
+
+    // Main application loop
+    while (1) {
+        if (TimerFlag) {
+            TimerFlag = 0;
+
+            // Perform the actions that should happen every timer period
+            // For example, reading temperature and sending data over UART
+            int16_t temperature = readTemp();
+            snprintf(output, sizeof(output), "Temperature: %d\n", temperature);
+            DISPLAY(strlen(output));
+        }
+    }
+}
+
+

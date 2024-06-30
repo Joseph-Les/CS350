@@ -1,0 +1,1936 @@
+!SESSION 2024-06-22 10:50:41.434 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product -keyring /Users/josephles/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.ti.ccstudio.branding.product -keyring /Users/josephles/.eclipse_keyring -showlocation
+
+This is a continuation of log file /Users/josephles/workspace_v12/.metadata/.bak_0.log
+Created Time: 2024-06-22 10:52:09.821
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2024-06-22 10:52:09.821
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://software-dl.ti.com/ccs/esd/CCSv12/Updates/CCS12.0.0.00009_update.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:405)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:709)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-22 10:52:09.822
+!MESSAGE No repository found at https://software-dl.ti.com/ccs/esd/CCSv12/Updates/CCS12.0.0.00009_update.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2024-06-22 10:52:20.574
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/codegen/Updates/p2mac/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-22 10:52:20.727
+!MESSAGE No repository found at https://software-dl.ti.com/ccs/esd/CCSv12/Updates/CCS12.0.0.00009_update.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2024-06-22 10:52:21.372
+!MESSAGE Using unsafe http transport to retrieve http://software-dl.ti.com/dsps/dsps_public_sw/sdo_ccstudio/CCSv5/Updates/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.jface 2 0 2024-06-22 10:54:07.555
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-22 10:54:07.556
+!MESSAGE A conflict occurred for ALT+E:
+Binding(ALT+E,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@25a85c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+Binding(ALT+E,
+	ParameterizedCommand(Command(com.ti.ccstudio.debug.ui.command.restoreDebugState,Restore Debug State,
+		Restore debug state for the selected core(s),
+		Category(com.ti.ccstudio.debug.ui.commandCategory,Code Composer Studio Debug Commands,Set of commands for Code Composer Studio debug actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@372f64d1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 11:00:15.131
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 11:00:15.185
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 11:01:08.285
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 11:01:24.857
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 11:01:24.875
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.654
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.665
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.666
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.667
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.667
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.667
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.735
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.737
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.738
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.739
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.740
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 11:02:36.741
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.jface 2 0 2024-06-22 11:04:43.722
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-22 11:04:43.722
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.refactor.extract.constant,Extract Constant - Refactoring ,
+		Extracts a constant for the selected expression,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@26a10abd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.command1,Terminal view insert,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@25a85c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.TerminalContext,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2024-06-22 11:04:43.730
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-22 11:04:43.730
+!MESSAGE A conflict occurred for ALT+ARROW_UP:
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.maximize,Maximize Active View or Editor,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7b7d581b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.moveLineUp,Move Lines Up,
+		Moves the selected lines up,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6fd6c5ab,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-22 11:04:43.730
+!MESSAGE A conflict occurred for ALT+ARROW_RIGHT:
+Binding(ALT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.quickaccess,Quick Access,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ef8a18e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+Binding(ALT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.goto.wordNext,Next Word,
+		Go to the next word,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3022a40e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-22 11:04:43.730
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.c.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@210e8f91,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.copy,Copy,
+		,
+		Category(org.eclipse.tm.terminal.category1,Terminal view commands,Terminal view commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78aced86,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.tm.terminal.EditContext,,,system)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 11:05:49.601
+!MESSAGE DS_ERROR: IcePick_C: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 11:05:49.984
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 15:16:33.383
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:17:10.594
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:17:10.614
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.720
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.723
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.724
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.725
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.726
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.727
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.789
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.789
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.790
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.793
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.793
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:18:19.793
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:29:08.967
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:29:08.995
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:30:16.087
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:30:16.108
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:46.989
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:46.992
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:46.996
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:46.998
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:46.999
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:46.999
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:47.075
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:47.075
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:47.075
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:47.076
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:47.077
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:31:47.078
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 15:32:17.987
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.085
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.087
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.090
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.103
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.105
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.106
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.179
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.180
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.180
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.181
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.181
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:54:37.181
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:57:34.763
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:57:34.785
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:58:41.578
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 15:58:41.601
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.299
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.306
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.308
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.308
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.308
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.308
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.367
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.368
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.368
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.369
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.369
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 15:59:53.369
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 16:00:02.921
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:10:37.613
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:10:37.639
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:12:04.004
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:12:04.029
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.688
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.698
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.701
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.704
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.705
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.706
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.907
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.909
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.909
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.910
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.910
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:13:21.911
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 16:13:32.254
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:15:23.888
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:15:23.909
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:15:32.670
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:15:33.101
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:15:33.132
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.807
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.811
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.816
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.817
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.818
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.819
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.879
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.879
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.880
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.880
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.880
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:15:36.881
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 16:16:05.080
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:19:12.191
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:19:12.214
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:19:30.293
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:19:30.747
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:19:30.771
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.446
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.448
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.450
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.451
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.453
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.454
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.517
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.518
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.518
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.518
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.519
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:19:35.519
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 16:19:45.192
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:21:08.174
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:21:08.195
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:21:11.327
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:21:11.751
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:21:11.778
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.752
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.755
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.757
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.758
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.759
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.761
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.842
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.842
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.842
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.843
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.843
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:21:16.843
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 16:21:29.822
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:42:57.859
+!MESSAGE DS_ERROR: Cortex_M4_0: GEL: Encountered a problem loading file: /Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:43:15.832
+!MESSAGE DS_ERROR: Cortex_M4_0: GEL: Encountered a problem loading file: /Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:43:34.826
+!MESSAGE DS_ERROR: Cortex_M4_0: GEL: Encountered a problem loading file: /Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:44:09.075
+!MESSAGE DS_ERROR: Cortex_M4_0: GEL: Encountered a problem loading file: /Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:46:15.696
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:46:15.719
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:46:24.111
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:46:24.565
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:46:24.590
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:46:30.062
+!MESSAGE DS_ERROR: Cortex_M4_0: GEL: Encountered a problem loading file: /Users/josephles/workspace_v12/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc/MCU+Image/gpiointerrupt_CC3220S_LAUNCHXL_nortos_gcc.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:48:11.755
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:48:11.777
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:48:18.068
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:48:18.491
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:48:18.515
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.130
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.139
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.142
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.143
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.144
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.146
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.430
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.430
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.431
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.433
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.435
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:48:25.436
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:53:43.023
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:53:43.050
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:53:45.130
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:53:45.615
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:53:45.642
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.776
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.779
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.781
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.782
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.784
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.787
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.868
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.869
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.869
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.869
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.871
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:53:59.872
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:57:42.374
+!MESSAGE DS_ERROR: CS_DAP: Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:57:42.454
+!MESSAGE DS_ERROR: Cortex_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:57:42.514
+!MESSAGE DS_ERROR: Cortex_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY org.eclipse.tm.terminal.control 4 0 2024-06-22 16:58:02.646
+!MESSAGE Underlying input stream returned zero bytes
+!STACK 0
+java.io.IOException: Underlying input stream returned zero bytes
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read0(Unknown Source)
+	at java.base/sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.base/java.io.InputStreamReader.read(Unknown Source)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.hasNextChar(VT100Emulator.java:1565)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processNewText(VT100Emulator.java:303)
+	at org.eclipse.tm.internal.terminal.emulator.VT100Emulator.processText(VT100Emulator.java:283)
+	at org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1.run(VT100TerminalControl.java:509)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:58:13.013
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:58:13.036
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:58:17.221
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:58:17.650
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 16:58:17.677
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.794
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.802
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.806
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.811
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.819
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.821
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.885
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.887
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.887
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.887
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.887
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 16:58:27.888
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 17:01:53.164
+!MESSAGE DS_ERROR: CS_DAP: Error connecting to the target: (Error -1170 @ 0x0) Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK). (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 17:01:53.193
+!MESSAGE DS_ERROR: Error connecting to the target:
+(Error -1170 @ 0x0)
+Unable to access the DAP. Reset the device, and retry the operation. If error persists, confirm configuration, power-cycle the board, and/or try more reliable JTAG settings (e.g. lower TCLK).
+(Emulation package 12.7.0.00130)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 17:01:55.278
+!MESSAGE DS_ERROR: IcePick_C: Error: (Error -261 @ 0xFFFFFEFB) Invalid response was received from the XDS110. (Emulation package 12.7.0.00130) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 17:01:55.698
+!MESSAGE DS_ERROR: IcePick_C: Unable to determine target status after 20 attempts
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2024-06-22 17:01:55.729
+!MESSAGE DS_ERROR: IcePick_C: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.037
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.041
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.045
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.047
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.049
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.050
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.098
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.099
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.099
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Clock Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.100
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Power Down Desired: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.100
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+In Reset: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY com.ti.ccstudio.debug.ui 2 0 2024-06-22 17:02:00.100
+!MESSAGE Invalid Target Status found in Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0
+Reset Control: IP_TAP_CNTL_$(.port-16) is converted to IP_TAP_CNTL_-16
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.796
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.801
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.802
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.802
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.802
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.803
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.803
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.803
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:262)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsole.setBackground(BuildConsole.java:133)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:374)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.803
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.804
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.804
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.804
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.804
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.805
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 2 2024-06-23 04:55:22.805
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.console 4 120 2024-06-23 04:55:22.805
+!MESSAGE Exception occurred during console property change notification.
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:811)
+	at org.eclipse.swt.widgets.Widget.getDisplay(Widget.java:935)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePage.propertyChange(BuildConsolePage.java:253)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.run(AbstractConsole.java:97)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.console.AbstractConsole$PropertyNotifier.notify(AbstractConsole.java:112)
+	at org.eclipse.ui.console.AbstractConsole.firePropertyChange(AbstractConsole.java:230)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleStreamDecorator.setColor(BuildConsoleStreamDecorator.java:46)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.propertyChange(BuildConsoleManager.java:362)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$2.run(ScopedPreferenceStore.java:325)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:322)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.lambda$0(ScopedPreferenceStore.java:171)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:849)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:852)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.remove(EclipsePreferences.java:959)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1448)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.resetOverriddenPreferences(PartRenderingEngine.java:1442)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$StylingPreferencesHandler.lambda$0(PartRenderingEngine.java:1431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4579)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4568)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3998)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:240)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:168)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
